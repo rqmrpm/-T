@@ -1,26 +1,117 @@
-[
-  {
-    "id": 1,
-    "name": "هاتف ذكي Pro",
-    "category": "إلكترونيات",
-    "price": 2500,
-    "description": "أحدث هاتف ذكي مع كاميرا فائقة الدقة وشاشة OLED.",
-    "image": "https://i.imgur.com/example.png"
-  },
-  {
-    "id": 2,
-    "name": "قميص قطني فاخر",
-    "category": "ملابس",
-    "price": 150,
-    "description": "قميص مريح مصنوع من القطن المصري الفاخر.",
-    "image": "https://i.imgur.com/example.png"
-  },
-  {
-    "id": 3,
-    "name": "سماعات لاسلكية",
-    "category": "إلكترونيات",
-    "price": 450,
-    "description": "سماعات بصوت نقي وعمر بطارية طويل.",
-    "image": "https://i.imgur.com/example.png"
-  }
-]
+/* --- إعدادات عامة --- */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    background-color: #f4f6f9;
+    color: #333;
+}
+main { padding: 25px; max-width: 1200px; margin: 0 auto; }
+
+/* --- الهيدر والفوتر --- */
+header, footer {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+}
+header h1 { margin: 0; color: #2c3e50; }
+footer { margin-top: 20px; font-size: 0.9em; color: #7f8c8d; }
+
+/* --- شريط الفئات --- */
+.categories-container {
+    background-color: #fff;
+    padding: 15px 0;
+    overflow-x: auto; /* يسمح بالتمرير الأفقي على الموبايل */
+    white-space: nowrap; /* يمنع الأزرار من النزول لسطر جديد */
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+}
+.category-button {
+    display: inline-block;
+    padding: 10px 22px;
+    margin: 0 6px;
+    border: 1px solid #bdc3c7;
+    border-radius: 20px;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+.category-button:hover, .category-button.active {
+    background-color: #2980b9;
+    color: #fff;
+    border-color: #2980b9;
+}
+
+/* --- شبكة المنتجات --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* --- بطاقة المنتج --- */
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.product-card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.product-card-content h3 { margin: 0 0 10px; font-size: 1.25em; }
+.product-card-content .description {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.5;
+    flex-grow: 1; /* يدفع التذييل للأسفل */
+}
+
+/* --- تذييل البطاقة (السعر والزر) --- */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+.price {
+    margin: 0;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #2980b9;
+}
+
+/* --- زر الطلب عبر واتساب --- */
+.order-button {
+    background-color: #25D366; /* لون واتساب الأخضر */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap;
+}
+.order-button:hover {
+    background-color: #1DAE54; /* لون أغمق */
+    transform: scale(1.05);
+}
