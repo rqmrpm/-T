@@ -1,0 +1,96 @@
+/* --- إعدادات عامة --- */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* --- الهيدر والفوتر --- */
+header, footer {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+}
+header h1 { margin: 0; color: #2c3e50; }
+footer { margin-top: 20px; font-size: 0.9em; color: #7f8c8d; }
+
+/* --- شريط الفئات --- */
+.categories-container {
+    background-color: #fff;
+    padding: 15px 0;
+    overflow-x: auto; /* يسمح بالتمرير الأفقي على الموبايل */
+    white-space: nowrap; /* يمنع الأزرار من النزول لسطر جديد */
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+}
+.category-button {
+    display: inline-block;
+    padding: 10px 22px;
+    margin: 0 6px;
+    border: 1px solid #bdc3c7;
+    border-radius: 20px;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+.category-button:hover {
+    background-color: #3498db;
+    color: #fff;
+    border-color: #3498db;
+}
+.category-button.active {
+    background-color: #2980b9;
+    color: #fff;
+    border-color: #2980b9;
+    font-weight: bold;
+}
+
+/* --- شبكة المنتجات --- */
+main { padding: 25px; max-width: 1200px; margin: 0 auto; }
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* --- بطاقة المنتج --- */
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.product-card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.product-card-content h3 { margin: 0 0 10px; font-size: 1.25em; }
+.product-card-content .description {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+.product-card-content .price {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #2980b9;
+    margin-top: auto; /* يدفع السعر لأسفل البطاقة */
+}
