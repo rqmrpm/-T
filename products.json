@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "هاتف ذكي Pro",
+    "category": "إلكترونيات",
+    "price": 2500,
+    "description": "أحدث هاتف ذكي مع كاميرا فائقة الدقة وشاشة OLED.",
+    "image": "https://i.imgur.com/example.png"
+  },
+  {
+    "id": 2,
+    "name": "قميص قطني فاخر",
+    "category": "ملابس",
+    "price": 150,
+    "description": "قميص مريح مصنوع من القطن المصري الفاخر.",
+    "image": "https://i.imgur.com/example.png"
+  },
+  {
+    "id": 3,
+    "name": "سماعات لاسلكية",
+    "category": "إلكترونيات",
+    "price": 450,
+    "description": "سماعات بصوت نقي وعمر بطارية طويل.",
+    "image": "https://i.imgur.com/example.png"
+  }
+]
